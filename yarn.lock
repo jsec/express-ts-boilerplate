@@ -66,14 +66,6 @@
   resolved "https://registry.yarnpkg.com/@types/cors/-/cors-2.8.12.tgz#6b2c510a7ad7039e98e7b8d3d6598f4359e5c080"
   integrity sha512-vt+kDhq/M2ayberEtJcIN/hxXy1Pk+59g2FV/ZQceeaTyCtCucjL2Q7FXlFjtWn4n15KCr1NE2lNNFhp0lEThw==
 
-"@types/express-pino-logger@^4.0.3":
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/@types/express-pino-logger/-/express-pino-logger-4.0.3.tgz#e7cd14723fc0b4ae24c1fc7e764b8f4c75b4ef73"
-  integrity sha512-qdx2MZACwyopWYVOF759/vO5B7DLYIqoub5jasjih13lTfk31VnD/DI5Y6G2GrGrY1Z4XPwZke9it2f/oq8pcw==
-  dependencies:
-    "@types/pino" "6.3"
-    "@types/pino-http" "*"
-
 "@types/express-serve-static-core@^4.17.18":
   version "4.17.27"
   resolved "https://registry.yarnpkg.com/@types/express-serve-static-core/-/express-serve-static-core-4.17.27.tgz#7a776191e47295d2a05962ecbb3a4ce97e38b401"
@@ -103,7 +95,7 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.8.tgz#50d680c8a8a78fe30abe6906453b21ad8ab0ad7b"
   integrity sha512-YofkM6fGv4gDJq78g4j0mMuGMkZVxZDgtU0JRdx6FgiJDG+0fY0GKVolOV8WqVmEhLCXkQRjwDdKyPxJp/uucg==
 
-"@types/pino-http@*":
+"@types/pino-http@^5.8.1":
   version "5.8.1"
   resolved "https://registry.yarnpkg.com/@types/pino-http/-/pino-http-5.8.1.tgz#ebb194750ad2f9245c3028b5d2c4e6d64f685ba9"
   integrity sha512-A9MW6VCnx5ii7s+Fs5aFIw+aSZcBCpsZ/atpxamu8tTsvWFacxSf2Hrn1Ohn1jkVRB/LiPGOapRXcFawDBnDnA==
@@ -697,13 +689,6 @@ etag@~1.8.1:
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
   integrity sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=
-
-express-pino-logger@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/express-pino-logger/-/express-pino-logger-7.0.0.tgz#db81705be45c4b875e8a18a2ec6fcbd20f83bcfc"
-  integrity sha512-g8T6nhqq9L9AuwppymXa1rm6+A7xVUfkcEodXA+d2ILsM1uyoqSn83kpXE61v6JR2eFL8n878VyFDir1w2PuPw==
-  dependencies:
-    pino-http "^6.0.0"
 
 express-session@^1.17.1:
   version "1.17.2"
@@ -1521,7 +1506,7 @@ pino-http-print@^3.1.0:
     pretty-ms "^7.0.0"
     through2 "^4.0.0"
 
-pino-http@^6.0.0:
+pino-http@^6.5.0:
   version "6.5.0"
   resolved "https://registry.yarnpkg.com/pino-http/-/pino-http-6.5.0.tgz#2211e7cd9f464c61d5200cd0fe55f326715cf013"
   integrity sha512-kIge9LCb5RvwyfWWVTBfQqU5kdwsh5ahDQ7ojbePujR4bctD5zeLPnGeS0Qpk14ZgobsmoQRzdU5/30Ny9LjWA==
@@ -1868,7 +1853,14 @@ signal-exit@^3.0.2:
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.6.tgz#24e630c4b0f03fea446a2bd299e62b4a6ca8d0af"
   integrity sha512-sDl4qMFpijcGw22U5w63KmD3cZJfBuFlVNbVMKje2keoKML7X2UzWbc4XrmEbDwg0NXJc3yv4/ox7b+JWb57kQ==
 
-sonic-boom@^2.1.0, sonic-boom@^2.2.0, sonic-boom@^2.2.1:
+sonic-boom@^2.1.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/sonic-boom/-/sonic-boom-2.5.0.tgz#269c62cc2255705ab22f3df7c27cafe9b65bac1a"
+  integrity sha512-zqxF6/LwJRn/twgva2GzabvBh2TeSEzstfnZ44kr0nB7+tFJJbixMlm4VUH/1FPjTf0sHQePoH8TlkfYNvXSPA==
+  dependencies:
+    atomic-sleep "^1.0.0"
+
+sonic-boom@^2.2.0, sonic-boom@^2.2.1:
   version "2.4.2"
   resolved "https://registry.yarnpkg.com/sonic-boom/-/sonic-boom-2.4.2.tgz#34c0965b1a498abedaaca794c752d190f74b5e8f"
   integrity sha512-zlOmAKFLJzTI+MbvmkWhnOOJ++NYo0Iy7F93ARNPmvZvpWG2l8Ff3uwM3CkpHqRw8v3pcRROScM5E+vbeTeOKw==
