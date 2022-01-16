@@ -1,24 +1,25 @@
-import pino from "pino-http";
+import pino from 'pino-http';
 
 const logger = pino({
   quietReqLogger: false,
   transport: {
-    target: "pino-http-print",
+    target: 'pino-http-print',
     options: {
       destination: 1,
       all: true,
-      translateTime: "SYS:yyyy-mm-dd HH:MM:ss",
-    },
+      translateTime: 'SYS:yyyy-mm-dd HH:MM:ss'
+    }
   },
-  customLogLevel: function(res, err) {
+  customLogLevel(res, err) {
     if (res.statusCode >= 400 && res.statusCode < 500) {
-      return "warn";
-    } else if (res.statusCode >= 500 || err) {
-      return "error";
+      return 'warn';
+    }
+    if (res.statusCode >= 500 || err) {
+      return 'error';
     }
 
-    return "info";
-  },
+    return 'info';
+  }
 });
 
 export default logger;
