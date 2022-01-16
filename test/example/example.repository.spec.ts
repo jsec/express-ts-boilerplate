@@ -8,9 +8,8 @@ describe("Example Repository", () => {
 
   it("should return a value", () => {
     const result = repository.getExample();
-    console.log(result);
 
-    expect(result).to.equal({
+    expect(result).to.deep.equal({
       id: 1,
       value: "some value",
     });

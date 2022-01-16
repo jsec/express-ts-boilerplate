@@ -9,7 +9,7 @@ describe("Example Controller", () => {
   it("should return the value from the repository", () => {
     const result = controller.get();
 
-    expect(result).to.equal({
+    expect(result).to.deep.equal({
       id: 1,
       value: "some value",
     });
