@@ -6,7 +6,13 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon src/app.ts",
-    "test": "npx mocha"
+    "test": "yarn mocha",
+    "knex": "knex --knexfile src/db/knexfile.ts",
+    "db:migrate": "yarn knex migrate:latest",
+    "db:migrate:make": "yarn knex migrate:make -x ts",
+    "db:seed": "yarn knex seed:run",
+    "db:seed:make": "yarn knex seed:make -x ts",
+    "db:rebuild": "yarn db:rollback --all && yarn db:migrate && yarn db:seed"
   },
   "devDependencies": {
     "@types/chai": "^4.3.0",
@@ -32,8 +38,12 @@
     "class-transformer": "^0.5.1",
     "class-validator": "^0.13.2",
     "cors": "^2.8.5",
+    "dotenv": "^14.2.0",
     "express": "^4.17.2",
     "helmet": "^5.0.1",
+    "knex": "^1.0.1",
+    "objection": "^3.0.1",
+    "pg": "^8.7.1",
     "pino-http": "^6.5.0",
     "pino-http-print": "^3.1.0",
     "reflect-metadata": "^0.1.13",

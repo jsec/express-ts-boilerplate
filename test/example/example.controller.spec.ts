@@ -1,4 +1,4 @@
-import { ExampleController } from '../../src/example/example.controller';
+import { ExampleController } from '../../src/api/example/example.controller';
 import { container, expect } from '../harness';
 
 describe('Example Controller', () => {

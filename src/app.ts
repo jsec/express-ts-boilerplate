@@ -5,8 +5,8 @@ import helmet from 'helmet';
 import { useContainer, useExpressServer } from 'routing-controllers';
 import { container } from 'tsyringe';
 import logger from './util/logger';
-import { ExampleController } from './example/example.controller';
 import { TsyringeAdapter } from './util/di-container.adapter';
+import { ExampleController } from './api/example/example.controller';
 
 const app = express();
 app.use(cors());

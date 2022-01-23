@@ -1,4 +1,4 @@
-import { ExampleRepository } from '../../src/example/example.repository';
+import { ExampleRepository } from '../../src/api/example/example.repository';
 import { container, expect } from '../harness';
 
 describe('Example Repository', () => {
