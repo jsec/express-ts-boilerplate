@@ -1,11 +1,9 @@
 import { autoInjectable } from 'tsyringe';
+import { Example } from '../../db/models/example.model';
 
 @autoInjectable()
 export class ExampleRepository {
-  public getExample(): any {
-    return {
-      id: 1,
-      value: 'some value'
-    };
+  public async getExample(): Promise<Example | undefined> {
+    return Example.query().first();
   }
 }
