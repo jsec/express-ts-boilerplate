@@ -1,15 +1,22 @@
-import { Controller, Get } from 'routing-controllers';
-import { Example } from '../../db/models/example.model';
+import { notFound } from '@hapi/boom';
+import { Controller, Get, Route } from 'tsoa';
 import { autoInjectable } from 'tsyringe';
-import { ExampleRepository } from './example.repository';
+import { Example } from '../../db/models/example.model';
+import { ExampleService } from './example.service';
 
-@Controller()
 @autoInjectable()
-export class ExampleController {
-  constructor(private readonly repository: ExampleRepository) { }
+@Route('example')
+export class ExampleController extends Controller {
+  constructor(private readonly service: ExampleService) {
+    super();
+  }
 
-  @Get('/example')
-  public get(): Promise<Example | undefined> {
-    return this.repository.getExample();
+  @Get()
+  public async get(): Promise<Example> {
+    const result = await this.service.getExample();
+
+    if (!result) throw notFound();
+
+    return result;
   }
 }

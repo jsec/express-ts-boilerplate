@@ -1,20 +1,27 @@
 {
   "compilerOptions": {
-    "rootDir": ".",
+    "incremental": true,
+    "target": "es2017",
+    "module": "commonjs",
+    "outDir": "build",
+    "strict": true,
+    "noImplicitAny": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,
     "moduleResolution": "node",
+    "baseUrl": ".",
+    "esModuleInterop": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
-    "importHelpers": true,
-    "target": "es2017",
-    "module": "commonjs",
-    "lib": ["es2017"],
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "skipDefaultLibCheck": true,
-    "strict": true,
-    "baseUrl": "."
+    "forceConsistentCasingInFileNames": true
   }
 }
