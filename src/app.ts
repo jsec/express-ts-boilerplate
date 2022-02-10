@@ -6,23 +6,21 @@ import helmet from 'helmet';
 import swaggerUi from 'swagger-ui-express';
 import logger from './util/logger';
 import { RegisterRoutes } from '../build/routes';
+import errorMiddleware from './middleware/error.middleware';
 
 const app = express();
-app.use(
-  bodyParser.urlencoded(({ extended: true }))
-);
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
 app.use(helmet());
 app.use(logger);
 
-app.use('/spec', swaggerUi.serve, async (_req: Request, res: Response) => {
-  return res.send(
-    swaggerUi.generateHTML(await import('../build/swagger.json'))
-  );
-})
+app.use('/spec', swaggerUi.serve, async (_req: Request, res: Response) =>
+  res.send(swaggerUi.generateHTML(await import('../build/swagger.json')))
+);
 
 RegisterRoutes(app);
+app.use(errorMiddleware);
 
 const port = 3000;
 
