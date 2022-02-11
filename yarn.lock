@@ -2642,10 +2642,10 @@ pino-http-print@^3.1.0:
     pretty-ms "^7.0.0"
     through2 "^4.0.0"
 
-pino-http@^6.5.0:
-  version "6.5.0"
-  resolved "https://registry.npmjs.org/pino-http/-/pino-http-6.5.0.tgz"
-  integrity sha512-kIge9LCb5RvwyfWWVTBfQqU5kdwsh5ahDQ7ojbePujR4bctD5zeLPnGeS0Qpk14ZgobsmoQRzdU5/30Ny9LjWA==
+pino-http@^6.6.0:
+  version "6.6.0"
+  resolved "https://registry.yarnpkg.com/pino-http/-/pino-http-6.6.0.tgz#d0a1deacada8c93327fdaa48f5bdc94bc43d3407"
+  integrity sha512-PlItaK2MLpoIMLEcClhfb1VQk/o6fKppINl5s6sPE/4rvufkdO3kCSs/92EwrBsB1yssRCQqDV+w1xpYuPVnjg==
   dependencies:
     fast-url-parser "^1.1.3"
     get-caller-file "^2.0.5"
