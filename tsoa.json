@@ -8,6 +8,6 @@
   },
   "routes": {
     "routesDir": "build",
-    "iocModule": "src/util/di-container.adapter"
+    "iocModule": "src/util/ioc.adapter"
   }
 }
