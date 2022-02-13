@@ -11,7 +11,7 @@ describe('Example Service', () => {
 
     expect(result).to.deep.equal({
       id: 1,
-      value: 'value2'
+      value: 'value'
     });
   });
 });

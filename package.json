@@ -14,6 +14,7 @@
     "db:migrate:make": "yarn knex migrate:make -x ts",
     "db:seed": "yarn knex seed:run",
     "db:seed:make": "yarn knex seed:make -x ts",
+    "db:rollback": "yarn knex migrate:rollback",
     "db:rebuild": "yarn db:rollback --all && yarn db:migrate && yarn db:seed"
   },
   "devDependencies": {

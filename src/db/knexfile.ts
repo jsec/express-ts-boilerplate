@@ -19,4 +19,4 @@ const config = {
   ...knexSnakeCaseMappers
 } as Knex.Config;
 
-export { config };
+export default config;
