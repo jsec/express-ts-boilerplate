@@ -6,12 +6,27 @@ describe('Example Controller', () => {
   // using a describe-scoped variable
   const controller = container.resolve(ExampleController);
 
-  it('should return the value from the service', async () => {
-    const result = await controller.get();
+  describe('getAll', () => {
+    it('should return all values from the service', async () => {
+      const result = await controller.getAll();
 
-    expect(result).to.deep.equal({
-      id: 1,
-      value: 'value'
+      expect(result).to.deep.equal([
+        {
+          id: 1,
+          value: 'value'
+        }
+      ]);
+    });
+  });
+
+  describe('getById', () => {
+    it('should return a single value from the service', async () => {
+      const result = await controller.getById(1);
+
+      expect(result).to.deep.equal({
+        id: 1,
+        value: 'value'
+      });
     });
   });
 });
